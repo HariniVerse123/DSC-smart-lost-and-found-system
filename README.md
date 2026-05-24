@@ -1,7 +1,5 @@
 # DSC Smart Lost and Found System
 
-This is a simple C language project for a smart lost and found system. It is made like a basic first year engineering project using the concepts we learned in C programming.
-
 The main idea of this project is that a user can add a lost item request and another user can add a found item report. If the found item matches with any lost item request, the program shows a message with the lost user's contact details.
 
 ## What This Project Does
@@ -70,6 +68,3 @@ Category: accessories
 
 Then the program will show that a possible match is found.
 
-## Note
-
-This project is made for learning purpose. It is not an advanced system and does not use database, files, internet, email, or SMS. It is a simple C program to understand how a lost and found system can work.
