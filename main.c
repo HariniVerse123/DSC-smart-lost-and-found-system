@@ -171,6 +171,36 @@ void displayFoundItems() {
         printf("Description: %s\n", foundItems[i].description);
     }
 }
+void searchLostItem() {
+    char searchName[50];
+    int found = 0;
+
+    printf("\nEnter item name to search: ");
+    fgets(searchName, 50, stdin);
+    removeNewLine(searchName);
+
+    printf("\n--- Search Results ---\n");
+
+    for (int i = 0; i < lostCount; i++) {
+
+        if (strcmp(lostItems[i].itemName, searchName) == 0) {
+
+            printf("\nRequest ID: %d\n", lostItems[i].id);
+            printf("User Name: %s\n", lostItems[i].userName);
+            printf("Contact: %s\n", lostItems[i].contact);
+            printf("Item Name: %s\n", lostItems[i].itemName);
+            printf("Category: %s\n", lostItems[i].category);
+            printf("Location: %s\n", lostItems[i].location);
+            printf("Description: %s\n", lostItems[i].description);
+
+            found = 1;
+        }
+    }
+
+    if (found == 0) {
+        printf("No matching lost item found.\n");
+    }
+}
 
 int main() {
     int choice;
