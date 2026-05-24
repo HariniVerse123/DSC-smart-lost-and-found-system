@@ -33,28 +33,6 @@ This project uses basic C concepts like:
 
 - `main.c` - C program code
 - `README.md` - Information about the project
-- `CONTRIBUTING.md` - Instructions for contributors
-
-## How to Run
-
-First compile the program using GCC.
-
-```bash
-gcc main.c -o lost_found
-```
-
-Then run it.
-
-```bash
-./lost_found
-```
-
-For Windows, you can use:
-
-```bash
-gcc main.c -o lost_found.exe
-./lost_found.exe
-```
 
 ## Menu Options
 
@@ -95,7 +73,3 @@ Then the program will show that a possible match is found.
 ## Note
 
 This project is made for learning purpose. It is not an advanced system and does not use database, files, internet, email, or SMS. It is a simple C program to understand how a lost and found system can work.
-
-## Contributors
-
-Friends and classmates can contribute by improving the code, adding comments, fixing mistakes, or making the program easier to use.
