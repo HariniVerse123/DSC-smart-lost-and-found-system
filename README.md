@@ -1,23 +1,32 @@
 # DSC Smart Lost and Found System
 
-A C-based smart lost and found system for registering, searching, claiming, and managing lost and found items. The project is designed for student communities, clubs, classrooms, and campus help desks that need a simple console-based tracking system.
+A beginner-friendly C project for managing lost and found items. This project is written at a basic first-year engineering level using simple C concepts such as structures, arrays, functions, loops, conditions, and strings.
 
 ## Features
 
-- Register lost items with name, category, description, location, contact details, and proof details.
-- Register found items with the same structured information.
-- Smart keyword search across item name, category, location, and description.
-- Match score system to show the most relevant results first.
-- Claim verification using a secret proof detail.
-- Mark items as claimed after successful verification.
-- List all registered items.
-- Save and load records using a local data file when the C program is run.
+- Add a lost item request from a user.
+- Add a found item report from a finder.
+- Match a found item with lost item requests using item name and category.
+- Show a simple console notification when a possible match is found.
+- Display all lost item requests.
+- Display all found item reports.
 
 ## Project Files
 
-- `main.c` - Main C source code for the smart lost and found system.
-- `README.md` - Project overview, setup, usage, and contribution guide.
-- `CONTRIBUTING.md` - Contributor guidelines for improving the project.
+- `main.c` - Main C source code for the lost and found system.
+- `README.md` - Project overview, setup, usage, and features.
+- `CONTRIBUTING.md` - Guidelines for contributors.
+
+## C Concepts Used
+
+- `struct`
+- arrays
+- functions
+- `if` conditions
+- `switch` statement
+- loops
+- strings using `char` arrays
+- basic input and output
 
 ## Requirements
 
@@ -39,33 +48,28 @@ gcc main.c -o lost_found
 ./lost_found
 ```
 
-## How to Use
+## How It Works
 
-1. Run the program.
-2. Choose whether to register a lost item or a found item.
-3. Enter item details such as name, category, description, location, contact, and secret proof.
-4. Use smart search to find matching items.
-5. Claim an item by entering its ID and the correct proof detail.
-6. Exit the program to save the latest records.
+1. A user can create a lost item request.
+2. Another user can create a found item report.
+3. When a found item is added, the program checks existing lost item requests.
+4. If the item name and category match, the program prints the lost user's contact details.
+5. This printed message acts as a basic notification.
 
-## Data Storage
+## Menu Options
 
-The program stores records in a file named `lost_found_data.txt` when it runs. This file is generated automatically by the program and is not required to be written manually.
+```text
+1. Add lost item request
+2. Add found item report
+3. View lost item requests
+4. View found item reports
+5. Exit
+```
 
-## Example Use Cases
+## Note
 
-- A student reports a lost ID card.
-- Someone finds a notebook and registers it as found.
-- The owner searches by keyword such as `notebook`, `ID card`, `library`, or `electronics`.
-- The owner claims the item by giving the correct proof detail.
+This is a simple console-based beginner project. It does not use a database, email, SMS, or advanced file handling. The notification is shown on the console screen.
 
 ## Contributing
 
-Contributions are welcome. You can improve the system by adding better search, file handling, input validation, sorting, reports, or a graphical interface.
-
-Please read `CONTRIBUTING.md` before opening a pull request.
-
-## License
-
-This project is open for learning and academic contribution. You may add a license file if you want to define formal usage rights.
-# DSC-smart-lost-and-found-system
+Contributions are welcome. Please keep changes simple and beginner-friendly so the project stays easy for students to understand.
