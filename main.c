@@ -67,8 +67,23 @@ void addLostItem() {
 }
 
 int isMatch(LostItem lost, FoundItem found) {
-    if (strcmp(lost.itemName, found.itemName) == 0 &&
-        strcmp(lost.category, found.category) == 0) {
+    char name1[50], name2[50];
+    char cat1[50], cat2[50];
+
+    // copy original data
+    strcpy(name1, lost.itemName);
+    strcpy(name2, found.itemName);
+    strcpy(cat1, lost.category);
+    strcpy(cat2, found.category);
+
+    // convert all to lowercase
+    toLowerCase(name1);
+    toLowerCase(name2);
+    toLowerCase(cat1);
+    toLowerCase(cat2);
+
+    // compare
+    if (strcmp(name1, name2) == 0 && strcmp(cat1, cat2) == 0) {
         return 1;
     }
 
