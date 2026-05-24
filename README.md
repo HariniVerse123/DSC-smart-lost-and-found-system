@@ -1,62 +1,64 @@
 # DSC Smart Lost and Found System
 
-A beginner-friendly C project for managing lost and found items. This project is written at a basic first-year engineering level using simple C concepts such as structures, arrays, functions, loops, conditions, and strings.
+This is a simple C language project for a smart lost and found system. It is made like a basic first year engineering project using the concepts we learned in C programming.
 
-## Features
+The main idea of this project is that a user can add a lost item request and another user can add a found item report. If the found item matches with any lost item request, the program shows a message with the lost user's contact details.
 
-- Add a lost item request from a user.
-- Add a found item report from a finder.
-- Match a found item with lost item requests using item name and category.
-- Show a simple console notification when a possible match is found.
-- Display all lost item requests.
-- Display all found item reports.
+## What This Project Does
 
-## Project Files
+- Takes lost item details from the user.
+- Takes found item details from the finder.
+- Compares the found item with lost item requests.
+- Shows a possible match if item name and category are same.
+- Displays lost item requests.
+- Displays found item reports.
+- Shows a simple notification message on the screen.
 
-- `main.c` - Main C source code for the lost and found system.
-- `README.md` - Project overview, setup, usage, and features.
-- `CONTRIBUTING.md` - Guidelines for contributors.
+## Concepts Used
 
-## C Concepts Used
+This project uses basic C concepts like:
 
-- `struct`
+- structures
 - arrays
+- strings
 - functions
-- `if` conditions
-- `switch` statement
-- loops
-- strings using `char` arrays
+- if conditions
+- switch case
+- for loop
+- do while loop
+- #define
 - basic input and output
 
-## Requirements
+## Files in This Repository
 
-You need a C compiler such as GCC.
+- `main.c` - C program code
+- `README.md` - Information about the project
+- `CONTRIBUTING.md` - Instructions for contributors
 
-## Compile and Run
+## How to Run
 
-### Windows with GCC
+First compile the program using GCC.
+
+```bash
+gcc main.c -o lost_found
+```
+
+Then run it.
+
+```bash
+./lost_found
+```
+
+For Windows, you can use:
 
 ```bash
 gcc main.c -o lost_found.exe
 ./lost_found.exe
 ```
 
-### Linux or macOS
-
-```bash
-gcc main.c -o lost_found
-./lost_found
-```
-
-## How It Works
-
-1. A user can create a lost item request.
-2. Another user can create a found item report.
-3. When a found item is added, the program checks existing lost item requests.
-4. If the item name and category match, the program prints the lost user's contact details.
-5. This printed message acts as a basic notification.
-
 ## Menu Options
+
+When the program runs, it shows these options:
 
 ```text
 1. Add lost item request
@@ -66,10 +68,34 @@ gcc main.c -o lost_found
 5. Exit
 ```
 
+## How Matching Works
+
+The matching is kept simple. The program checks whether the found item name and category are the same as any lost item request. If both match, it prints a possible match message and shows the lost user's contact details.
+
+This is only a basic console notification, not an email or SMS notification.
+
+## Example
+
+If one user enters a lost item like:
+
+```text
+Item name: wallet
+Category: accessories
+```
+
+And another user reports a found item like:
+
+```text
+Item name: wallet
+Category: accessories
+```
+
+Then the program will show that a possible match is found.
+
 ## Note
 
-This is a simple console-based beginner project. It does not use a database, email, SMS, or advanced file handling. The notification is shown on the console screen.
+This project is made for learning purpose. It is not an advanced system and does not use database, files, internet, email, or SMS. It is a simple C program to understand how a lost and found system can work.
 
-## Contributing
+## Contributors
 
-Contributions are welcome. Please keep changes simple and beginner-friendly so the project stays easy for students to understand.
+Friends and classmates can contribute by improving the code, adding comments, fixing mistakes, or making the program easier to use.
