@@ -3,9 +3,6 @@
 #include <stdio.h>
 #include <string.h>
 
-// Contributor: chataketejaswini-commits
-// Feature: Lost and Found System
-
 #define MAX 50
 #define MAX 50
 
